@@ -1,0 +1,20 @@
+# ==============================================================================
+# Requirements for Real-Time Face Detection Web Application & API
+# ==============================================================================
+
+# Web Framework
+flask>=3.0.0
+
+# WSGI Server for Production / Cloud Deployment (Render, Railway, Hugging Face)
+gunicorn>=21.2.0; sys_platform != "win32"
+
+# Computer vision and video stream processing
+opencv-python>=4.8.0
+
+# Numerical operations and array processing
+numpy>=1.24.0
+
+# Face detection engine
+# Precompiled binary for Windows (no C++ compiler / Visual Studio needed)
+dlib-bin>=20.0.1; sys_platform == "win32"
+dlib>=19.24.0; sys_platform != "win32"
